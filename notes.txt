@@ -1,0 +1,5 @@
+pomodoro timer
+the ability to add clients
+Auto Time Tracking.
+Log In - Out
+Auth with passport js

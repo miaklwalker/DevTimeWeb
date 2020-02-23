@@ -1,0 +1,38 @@
+{
+  "name": "webdevelopmenttemplate",
+  "version": "1.0.0",
+  "description": "My Default starter template for web development",
+  "main": "index.html",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/preset-typescript": "^7.8.3",
+    "@types/jest": "^25.1.3",
+    "babel-jest": "^25.1.0",
+    "babel-preset-minify": "^0.5.1",
+    "dart-sass": "^1.25.0",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-html-replace": "^1.6.2",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.2",
+    "jest": "^25.1.0",
+    "live-server": "^1.2.1",
+    "sass": "^1.25.0",
+    "ts-jest": "^25.2.1",
+    "typescript": "^3.7.5"
+  },
+  "keywords": [
+    "Michael",
+    "Walker"
+  ],
+  "author": "Michael Walker",
+  "license": "MIT"
+}

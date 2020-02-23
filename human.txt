@@ -1,0 +1,39 @@
+/* TEAM */
+
+
+Designer / Developer : Michael Walker.
+
+
+Site: This one!.
+
+Location: Evansville, The United States Of America.
+
+
+
+[...]
+
+
+
+/* THANKS */
+
+
+
+
+
+[...]
+
+
+
+/* SITE */
+
+
+Last update: 2020/02/08
+
+
+Standards: HTML5, SASS , TypeScript , Gulp
+
+
+Components: None
+
+
+Software: WebStorm IDE and Visual Studio Code
