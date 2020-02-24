@@ -22,7 +22,87 @@
     <title> </title>
 </head>
 <body>
-
+<header class="bg-black flex-row">
+    <h1 class="white">DevTime</h1>
+    <nav >
+        <ul class="white">
+            <li>
+                <details>
+                    <summary>
+                        Clients
+                    </summary>
+                </details>
+            </li>
+            <li>
+                <details>
+                    <summary>
+                        Projects
+                    </summary>
+                </details>
+            </li>
+            <li>
+                <details>
+                    <summary>
+                        Timers
+                    </summary>
+                </details>
+            </li>
+            <li>
+                <details>
+                    <summary>
+                        Tools
+                    </summary>
+                </details>
+            </li>
+            <li class='danger'>Log Out</li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <aside class="vertical flex-column bg-black">
+        <div class="infoPanel">
+            <div class="primary">
+                <h2>Current Client</h2>
+            </div>
+            <div class="white">
+                <h3>Michael Walker</h3>
+            </div>
+        </div>
+        <div class="infoPanel">
+            <div class="primary">
+                <h2>Project</h2>
+            </div>
+            <div class="white">
+                <h3>Personal Projects</h3>
+            </div>
+        </div>
+        <div class="infoPanel">
+            <div class="primary">
+                <h2>Session Length</h2>
+            </div>
+            <div class="white">
+                <h3 class="session-readout">6H : 23m</h3>
+            </div>
+        </div>
+         <div class="infoPanel">
+            <div class="primary">
+                <h2>Project Length</h2>
+            </div>
+            <div class="white">
+                <h3 class="project-readout"> 2D : 8H : 23m</h3>
+            </div>
+        </div>
+    </aside>
+    <section class="content-container timer bg-secondary">
+        <h1 class="danger">TIMER</h1>
+        <h1 class="timer-readout">00:00:00:00</h1>
+        <div class="btn-group">
+        <button class=" bg-danger white btn">Stop</button>
+        <button class="bg-black primary btn">Pause</button>
+        <button class="bg-primary white btn">Start</button>
+        </div>
+    </section>
+</main>
 <!-- build:js -->
 <script src="./dist/js/main.js" type="module"></script>
 <!-- endbuild -->

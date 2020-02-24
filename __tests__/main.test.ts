@@ -1,5 +1,9 @@
-import add from '../typescript/main';
+import Timer from '../typescript/main';
+describe('Timer Class - Will Contain all the necessary components for the timer functionality',()=>{
+    // act
+    let timer;
+    beforeEach(()=>{
 
-it('add to import properly',()=>{
-    expect(add(2,2)).toBe(4);
+    });
+test.todo;
 });

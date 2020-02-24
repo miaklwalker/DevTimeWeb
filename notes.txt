@@ -1,5 +1,32 @@
+---timers----
 pomodoro timer
+regular timer
+---features--
 the ability to add clients
 Auto Time Tracking.
 Log In - Out
 Auth with passport js
+---tools-----
+todo list
+client notes
+project notes
+design links
+client contact info
+client domain info
+client payment info
+invoice
+---timer---
+before database added
+    timer when stopped added to session storage
+    session timer get auto updated by session storage
+    project length gets updated by local storage
+
+---guess at final stack-
+styled components
+redux
+mongoose
+node
+express
+react
+sass
+typescript

@@ -1,6 +1,39 @@
-$primary-color:#F5844D;
-$text-less-focus:#3E3E3E;
-$brown:#585248;
-$dark:#3E3E3E;
-$olYellow:#F7C46B;
-$off-white:#fff9f4;
+$black:#000000;
+$white:#FEFEFE;
+$primary:#4B88A1;
+$secondary:#617073;
+$danger:#840032;
+
+
+// Color Classes
+.black{
+  color:$black;
+}
+.white{
+  color:$white;
+}
+.primary{
+  color:$primary;
+}
+.secondary{
+  color:$secondary;
+}
+.danger{
+  color:$danger;
+}
+
+.bg-black{
+  background-color: $black;
+}
+.bg-white{
+  background-color:$white;
+}
+.bg-primary{
+  background-color:$primary;
+}
+.bg-secondary{
+  background-color:$secondary
+}
+.bg-danger{
+  background-color:$danger;
+}

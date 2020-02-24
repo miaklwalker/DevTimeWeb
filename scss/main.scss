@@ -2,7 +2,77 @@
 @use 'colors';
 @use 'fonts';
 @use 'mixins';
+@use 'layouts';
 
 
-
+html{
+  body{
+    header{
+      justify-content: left;
+      height:10vh;
+      text-transform: uppercase;
+      letter-spacing: 3.6px;
+      h1{
+        width:15vw;
+        margin-top:1vh;
+        margin-right: 5vw;
+        margin-left:3vw;
+      }
+      nav{
+        width: 70vw;
+        ul{
+          height:10vh;
+          @include mixins.flex-center;
+          flex-direction: row;
+          justify-content: space-between;
+        }
+      }
+    }
+    main{
+      display: flex;
+      aside{
+        height:90vh;
+        justify-content: space-around;
+        align-items: center;
+        width: 20vw;
+        text-align: center;
+        .infoPanel{
+          h2{
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2.8px;
+          }
+          h3{
+            text-transform: uppercase;
+            font-size: 1rem;
+            letter-spacing: 2.8px;
+          }
+        }
+      }
+      section{
+        display:flex;
+        flex-direction: column;
+        &.timer{
+          width:80vw;
+          height:90vh;
+          text-align: center;
+          @include fonts.block-font;
+          text-shadow: black 2px 2px;
+          h1{
+            font-size:4rem;
+            margin-bottom: 10vh;
+            &.timer{
+              font-size: 10rem;
+            }
+          }
+        }
+        .btn{
+          border:none;
+          border-radius: 10px;
+          padding:1% 2%;
+        }
+      }
+    }
+  }
+}
 

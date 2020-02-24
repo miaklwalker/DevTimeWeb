@@ -1,0 +1,8 @@
+@font-face {
+  src: url("../FFFFORWA.TTF") format("ttf");
+  font-family: "FFFFORWA";
+}
+
+@mixin block-font{
+  font-family: "FFFFORWA", monospace ;
+}

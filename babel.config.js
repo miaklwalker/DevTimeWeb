@@ -8,7 +8,9 @@ module.exports = {
       }
     ],
     "@babel/preset-typescript",
-    "minify"
+      ['minify', {
+          'builtIns': false
+      }]
   ],
   "plugins": []
 };

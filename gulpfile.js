@@ -24,7 +24,7 @@ const paths = {
         dest: './dist/css'
     },
     script: {
-        src: './typescript/*.ts',
+        src: './typescript/**/*.ts',
         dest: './dist/js'
     }
 };
@@ -48,6 +48,7 @@ function config() {
     return gulp.src(['./_redirects', './*.txt',
         //'./CNAME',
         //'./favicon.ico',
+        './**.TTF',
         './site.webmanifest'])
         .pipe(gulp.dest('./dist'));
 }
