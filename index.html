@@ -21,7 +21,7 @@
     <!-- endbuild -->
     <title> </title>
 </head>
-<body>
+<body class="light">
 <header class="bg-black flex-row">
     <h1 class="white">DevTime</h1>
     <nav >
@@ -54,6 +54,7 @@
                     </summary>
                 </details>
             </li>
+            <li><a href="#" id="viewing-mode">Light Mode</a></li>
             <li class='danger'>Log Out</li>
         </ul>
     </nav>
@@ -93,12 +94,12 @@
             </div>
         </div>
     </aside>
-    <section class="content-container timer bg-secondary">
+    <section class="content-container timer bg-black">
         <h1 class="danger">TIMER</h1>
-        <h1 class="timer-readout">00:00:00:00</h1>
+        <h1 class="timer-readout danger">00:00:00:00</h1>
         <div class="btn-group">
         <button class=" bg-danger white btn">Stop</button>
-        <button class="bg-black primary btn">Pause</button>
+        <button class="bg-secondary white btn">Pause</button>
         <button class="bg-primary white btn">Start</button>
         </div>
     </section>

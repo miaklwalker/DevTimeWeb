@@ -15,11 +15,24 @@ let storage = id[0] === '1' ? sessionStorage : id[0]==='2' ? localStorage : fals
     if(storage) {
         if (storage.getItem('session' + id) !== null) {
             let current = Number(sessionStorage.getItem('session' + id));
-            current += sec;
+            current ++;
             storage.setItem('session' + id, String(current));
             } else {
                 storage.setItem('session' + id, String(sec));
         }
+    }
+}
+
+function getFromCache(id:string){
+    let storage = id[0] === '1' ? sessionStorage : id[0]==='2' ? localStorage : false;
+    if(storage) {
+        if (storage.getItem('session' + id) !== null) {
+            return Number(storage.getItem('session'+id)) as number;
+        } else {
+            return 0 as number ;
+        }
+    }else{
+        return 0 as number;
     }
 }
 
@@ -28,27 +41,31 @@ export default class Timer {
     private timer:number;
     el:HTMLElement;
     id: string;
+    private startBuffer: number;
     constructor(el:HTMLElement,starting:number = 0,id:string){
+        this.startBuffer = starting;
         this.secondsWorked = starting;
         this.timer = 0;
         this.el = el;
         this.id = id;
     }
     start=()=>{
+        this.secondsWorked = getFromCache(this.id);
         this.timer = window.setInterval(()=> {
             this.secondsWorked++;
             this.showTimer();
-            this.secondsWorked % 60 && saveToCache(this.secondsWorked,this.id);
+            this.secondsWorked % 60 === 0 && saveToCache(this.secondsWorked,this.id);
         },1000) as number;
     };
     pause=()=>{
         window.clearInterval(this.timer);
+        console.log(this.secondsWorked,this.id);
         saveToCache(this.secondsWorked,this.id);
     };
     stop=()=>{
         let time = this.secondsWorked;
         window.clearInterval(this.timer);
-        this.secondsWorked = 0;
+        this.secondsWorked = this.startBuffer;
         this.showTimer();
         saveToCache(time,this.id);
         return time;
