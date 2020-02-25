@@ -1,6 +1,8 @@
+*** - Completed
+
 ---timers----
 pomodoro timer
-regular timer
+ *** regular timer
 ---features--
 the ability to add clients
 Auto Time Tracking.
@@ -13,7 +15,11 @@ project notes
 design links
 client contact info
 client domain info
+client domain dashboard link
 client payment info
+project status
+questions for client
+project notes
 invoice
 ---timer---
 before database added

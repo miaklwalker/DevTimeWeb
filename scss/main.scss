@@ -50,21 +50,59 @@ html{
         }
       }
       section{
-        display:flex;
-        flex-direction: column;
-        &.timer{
-          width:80vw;
-          height:90vh;
-          text-align: center;
-          @include fonts.block-font;
-          text-shadow: black 4px 4px;
-          h1{
-            font-size:7rem;
-            &.timer-readout{
-              margin-bottom: 1vh;
-              font-size: 8rem;
+
+        div {
+          &.timer {
+            display:flex;
+            flex-direction: column;
+            width: 80vw;
+            height: 90vh;
+            text-align: center;
+            @include fonts.block-font;
+            text-shadow: black 4px 4px;
+
+            h1 {
+              font-size: 7rem;
+
+              &.timer-readout {
+                margin-bottom: 1vh;
+                font-size: 8rem;
+              }
             }
           }
+          &.timer-vertical{
+            display:flex;
+            flex-direction: row;
+            width:80vw;
+            justify-content: space-evenly;
+            align-content: center;
+            .btn-group{
+              display: flex;
+              flex-direction: row;
+              .btn{
+                margin-right:3vw;
+              }
+            }
+
+          }
+          &.p-timer {
+            display:flex;
+            flex-direction: column;
+            width: 80vw;
+            height: 90vh;
+            text-align: center;
+            @include fonts.block-font;
+            text-shadow: black 4px 4px;
+
+            h1 {
+              font-size: 4rem;
+              &.timer-readout {
+                margin-bottom: 1vh;
+                font-size: 8rem;
+              }
+            }
+          }
+
         }
         .btn{
           border:1px black solid;

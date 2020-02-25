@@ -25,6 +25,7 @@
     "gulp-uglify": "^3.0.2",
     "jest": "^25.1.0",
     "live-server": "^1.2.1",
+    "redux-devtools": "^3.5.0",
     "sass": "^1.25.0",
     "ts-jest": "^25.2.1",
     "typescript": "^3.7.5"
@@ -34,5 +35,8 @@
     "Walker"
   ],
   "author": "Michael Walker",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "redux": "^4.0.5"
+  }
 }

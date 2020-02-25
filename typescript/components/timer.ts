@@ -1,47 +1,25 @@
+
+// can also be timer-vertical
 const timer = `
-    <section class="timer bg-secondary">
+        <div class="container timer bg-black">
         <h1 class="danger">TIMER</h1>
-        <h1 class="timer-readout">00:00:00:00</h1>
+        <h1 class="timer-readout danger">00:00:00:00</h1>
         <div class="btn-group">
         <button class=" bg-danger white btn">Stop</button>
-        <button class="bg-black primary btn">Pause</button>
+        <button class="bg-secondary white btn">Pause</button>
         <button class="bg-primary white btn">Start</button>
         </div>
-    </section>
+        </div>
 `;
-
-function saveToCache(sec:number,id:string){
-let storage = id[0] === '1' ? sessionStorage : id[0]==='2' ? localStorage : false;
-    if(storage) {
-        if (storage.getItem('session' + id) !== null) {
-            let current = Number(sessionStorage.getItem('session' + id));
-            current ++;
-            storage.setItem('session' + id, String(current));
-            } else {
-                storage.setItem('session' + id, String(sec));
-        }
-    }
-}
-
-function getFromCache(id:string){
-    let storage = id[0] === '1' ? sessionStorage : id[0]==='2' ? localStorage : false;
-    if(storage) {
-        if (storage.getItem('session' + id) !== null) {
-            return Number(storage.getItem('session'+id)) as number;
-        } else {
-            return 0 as number ;
-        }
-    }else{
-        return 0 as number;
-    }
-}
+const buttons_dom = document.querySelectorAll('.btn') as NodeListOf<Element>;
+const defaultButtons = [...buttons_dom] as [HTMLButtonElement,HTMLButtonElement,HTMLButtonElement];
 
 export default class Timer {
     secondsWorked:number;
     private timer:number;
     el:HTMLElement;
     id: string;
-    private startBuffer: number;
+    startBuffer: number;
     constructor(el:HTMLElement,starting:number = 0,id:string){
         this.startBuffer = starting;
         this.secondsWorked = starting;
@@ -50,24 +28,19 @@ export default class Timer {
         this.id = id;
     }
     start=()=>{
-        this.secondsWorked = getFromCache(this.id);
         this.timer = window.setInterval(()=> {
             this.secondsWorked++;
             this.showTimer();
-            this.secondsWorked % 60 === 0 && saveToCache(this.secondsWorked,this.id);
         },1000) as number;
     };
     pause=()=>{
         window.clearInterval(this.timer);
-        console.log(this.secondsWorked,this.id);
-        saveToCache(this.secondsWorked,this.id);
     };
     stop=()=>{
         let time = this.secondsWorked;
         window.clearInterval(this.timer);
         this.secondsWorked = this.startBuffer;
         this.showTimer();
-        saveToCache(time,this.id);
         return time;
     };
     showTimer(){
@@ -79,7 +52,7 @@ export default class Timer {
         this.el.innerHTML = `${days}:${hours}:${minutes}:<span class="small-seconds">${seconds}<span>`
         return sec;
     }
-    assignButtons(buttons:[HTMLButtonElement,HTMLButtonElement,HTMLButtonElement]){
+    assignButtons(buttons:[HTMLButtonElement,HTMLButtonElement,HTMLButtonElement]=defaultButtons){
         const [stop , pause , start] = buttons;
         stop.addEventListener('click',this.stop);
         pause.addEventListener('click',this.pause);
